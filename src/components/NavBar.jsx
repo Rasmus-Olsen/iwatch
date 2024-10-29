@@ -11,11 +11,11 @@ const Navbar = () => {
       </div>
 
       <div className="flex space-x-6 text-white">
-        <NavButton text="Mac" href="#" />
-        <NavButton text="Iphone" href="#" />
-        <NavButton text="IPad" href="#" />
-        <NavButton text="IWatch" href="#" />
-        <NavButton text="Support" href="#" />
+        <NavButton text="Mac" link="#" />
+        <NavButton text="Iphone" link="#" />
+        <NavButton text="IPad" link="#" />
+        <NavButton text="IWatch" link="#" />
+        <NavButton text="Support" link="#" />
       </div>
 
       <div className="flex space-x-4">
