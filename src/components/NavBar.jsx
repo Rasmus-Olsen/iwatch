@@ -6,9 +6,9 @@ import { FiSearch, FiShoppingBag } from "react-icons/fi";
 const Navbar = () => {
   return (
     <div className="flex items-center justify-between rounded-lg py-4 max-w-7xl mx-auto">
-      <div>
-        <AiFillApple className="text-white" size={50} />
-      </div>
+      <a className="cursor-pointer" href="#">
+        <AiFillApple size={50} />
+      </a>
 
       <div className="flex space-x-6 text-white">
         <NavButton text="Mac" link="#" />
@@ -19,9 +19,13 @@ const Navbar = () => {
       </div>
 
       <div className="flex space-x-4">
-        <FiSearch className="text-white" size={24} />
+        <a className="cursor-pointer" href="#">
+          <FiSearch size={24} />
+        </a>
         <div className="w-px h-6 bg-white"></div>
-        <FiShoppingBag className="text-white" size={24} />
+        <a className="cursor-pointer" href="#">
+          <FiShoppingBag size={24} />
+        </a>
       </div>
     </div>
   );
