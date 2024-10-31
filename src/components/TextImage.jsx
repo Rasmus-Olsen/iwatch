@@ -4,7 +4,7 @@ import ImageBg from "./ImageBg";
 
 const TextImage = (props) => {
   return (
-    <section className="grid grid-cols-[50%_40%_10%] max-w-7xl mx-auto mt-20 mb-20 h-full">
+    <section className="grid grid-cols-[50%_48%_2%] max-w-7xl mx-auto mt-20 mb-20 h-full">
       <div className="grid gap-2 pt-20">
         <div className="text-6xl">
           <h1 className="font-bold">{props.mainTitle}</h1>
