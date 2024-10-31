@@ -21,7 +21,7 @@ const TextImage = (props) => {
         <Image className="mb-10" src="/navy.png" width={500} height={500} alt="Iwatch" />
         <ImageBg />
       </div>
-      <div className="flex flex-col items-center mt-36 mb-auto">
+      <div className="flex flex-col items-center mt-auto mb-auto">
         <div className="w-5 h-5 bg-[#434558] rounded-full border-2 border-white transform transition-transform duration-300 hover:scale-150 cursor-pointer"></div>
         <div className="w-0.5 h-6 bg-gray-300 my-1"></div>
         <div className="w-5 h-5 bg-[#6ADDCC] rounded-full border-2 border-white transform transition-transform duration-300 hover:scale-150 cursor-pointer"></div>
