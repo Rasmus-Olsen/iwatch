@@ -1,19 +1,24 @@
-"use client"; // Sørg for at køre på client-side i Next.js
+"use client";
 
 import { useState } from "react";
 import Image from "next/image";
 import ImageBg from "./ImageBg";
 
-import SortImg from "../../public/navy.png"; // Standard billede
+import ColorSelector from "./ColorSelector";
+
+import SortImg from "../../public/navy.png";
 import TealImg from "../../public/mint.png";
 import WhiteImg from "../../public/ocean.png";
 
 const TextImage = (props) => {
-  const [imgSrc, setImgSrc] = useState(SortImg); // Holder styr på det store billede
+  const [imgSrc, setImgSrc] = useState(SortImg);
 
-  const handleImageChange = (newImage) => {
-    setImgSrc(newImage); // Opdaterer det store billede, når et lille billede klikkes
+  const imageCollection = {
+    SortImg,
+    TealImg,
+    WhiteImg,
   };
+
   return (
     <section className="grid grid-cols-[50%_48%_2%] max-w-7xl mx-auto mt-20 mb-20 h-full">
       <div className="grid gap-2 pt-20">
@@ -34,18 +39,13 @@ const TextImage = (props) => {
           <Image src={imgSrc} alt="Apple watch" width={500} height={500} />
         </div>
         <div className="flex justify-between w-full">
-          <ImageBg bgColor="bg-[#434558]" imageSkift={SortImg} onClick={() => handleImageChange(SortImg)} />
-          <ImageBg bgColor="bg-[#6ADDCC]" imageSkift={TealImg} onClick={() => handleImageChange(TealImg)} />
-          <ImageBg bgColor="bg-[#F0EFF4]" imageSkift={WhiteImg} onClick={() => handleImageChange(WhiteImg)} />
+          <ImageBg bgColor="bg-[#434558]" src={SortImg} setImgSrc={setImgSrc} />
+          <ImageBg bgColor="bg-[#6ADDCC]" src={TealImg} setImgSrc={setImgSrc} />
+          <ImageBg bgColor="bg-[#F0EFF4]" src={WhiteImg} setImgSrc={setImgSrc} />
         </div>
       </div>
-      <div className="flex flex-col items-center mt-auto mb-auto">
-        <div className="w-5 h-5 bg-[#434558] rounded-full border-2 border-white transform transition-transform duration-300 hover:scale-150 cursor-pointer"></div>
-        <div className="w-0.5 h-6 bg-gray-300 my-1"></div>
-        <div className="w-5 h-5 bg-[#6ADDCC] rounded-full border-2 border-white transform transition-transform duration-300 hover:scale-150 cursor-pointer"></div>
-        <div className="w-0.5 h-6 bg-gray-300 my-1"></div>
-        <div className="w-5 h-5 bg-[#F0EFF4] rounded-full border-2 border-white transform transition-transform duration-300 hover:scale-150 cursor-pointer"></div>
-      </div>
+
+      <ColorSelector {...imageCollection} setImgSrc={setImgSrc} />
     </section>
   );
 };
