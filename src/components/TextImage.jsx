@@ -6,7 +6,7 @@ import ImageBg from "./ImageBg";
 
 import SortImg from "../../public/navy.png"; // Standard billede
 import TealImg from "../../public/mint.png";
-import PinkImg from "../../public/ocean.png";
+import WhiteImg from "../../public/ocean.png";
 
 const TextImage = (props) => {
   const [imgSrc, setImgSrc] = useState(SortImg); // Holder styr på det store billede
@@ -36,7 +36,7 @@ const TextImage = (props) => {
         <div className="flex justify-between w-full">
           <ImageBg bgColor="bg-[#434558]" imageSkift={SortImg} onClick={() => handleImageChange(SortImg)} />
           <ImageBg bgColor="bg-[#6ADDCC]" imageSkift={TealImg} onClick={() => handleImageChange(TealImg)} />
-          <ImageBg bgColor="bg-[#F9CDC4]" imageSkift={PinkImg} onClick={() => handleImageChange(PinkImg)} />
+          <ImageBg bgColor="bg-[#F0EFF4]" imageSkift={WhiteImg} onClick={() => handleImageChange(WhiteImg)} />
         </div>
       </div>
       <div className="flex flex-col items-center mt-auto mb-auto">
@@ -44,7 +44,7 @@ const TextImage = (props) => {
         <div className="w-0.5 h-6 bg-gray-300 my-1"></div>
         <div className="w-5 h-5 bg-[#6ADDCC] rounded-full border-2 border-white transform transition-transform duration-300 hover:scale-150 cursor-pointer"></div>
         <div className="w-0.5 h-6 bg-gray-300 my-1"></div>
-        <div className="w-5 h-5 bg-[#F9CDC4] rounded-full border-2 border-white transform transition-transform duration-300 hover:scale-150 cursor-pointer"></div>
+        <div className="w-5 h-5 bg-[#F0EFF4] rounded-full border-2 border-white transform transition-transform duration-300 hover:scale-150 cursor-pointer"></div>
       </div>
     </section>
   );
